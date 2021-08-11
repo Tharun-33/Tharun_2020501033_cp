@@ -5,10 +5,8 @@
 
 
 def fun_ismultiple(m, n):
-	if(m==0):
+	if(m==0 or m%n==0):
 		return True	
-	if(n==0):
+	elif(n==0):
 		return False
-	elif(m%n==0):
-		return True	
 	return False # replace with your solution
