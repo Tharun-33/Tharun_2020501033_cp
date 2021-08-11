@@ -11,4 +11,4 @@ def handtodice(hand):
 	y=hand%10
 	hand=hand//10
 	z=hand%10
-	return x,y,z
+	return z,y,x
