@@ -15,5 +15,6 @@ public class PowerSum {
 
     public static void main(String[] args) {
         // Write your own test cases...
+        System.out.println("java")
     }
 }
