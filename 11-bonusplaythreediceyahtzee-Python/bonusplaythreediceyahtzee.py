@@ -1,11 +1,15 @@
 # bonusPlayThreeDiceYahtzee(dice) [5pts]
-# In this exercise, we will write a simplified form of the dice game Yahtzee. In this version, the 
-# goal is to get 3 matching dice, and if you can't do that, then you hope to at least get 2 
+# In this exercise, we will write a simplified form of the dice game Yahtzee. 
+# In this version, the 
+# goal is to get 3 matching dice, and if you can't do that, 
+# then you hope to at least get 2 
 # matching dice. The game is played like so:
 # Roll 3 dice.
 # If you do not have 3 matching dice:
-# If you have 2 matching dice (a pair), keep the pair and roll one die to replace the third die.
-# Otherwise, if you have no matching dice, keep the highest die and roll two dice to replace the 
+# If you have 2 matching dice (a pair), keep the pair and roll one die to replace
+#  the third die.
+# Otherwise, if you have no matching dice, keep the highest die and roll two dice
+#  to replace the 
 # other two dice.
 # Repeat step 2 one more time.
 # Finally, compute your score like so:
@@ -38,7 +42,41 @@
 # assert(bonusPlayThreeDiceYahtzee(2333413) == (333, 29))
 # assert(bonusPlayThreeDiceYahtzee(2333555) == (555, 35))
 
+# def firstroll(dice):
+# 	return dice%1000
+
+def score(roll_list):
+	d1,d2,d3=int(roll_list[0]),int(roll_list[1]),int(roll_list[2])
+	if(d1==d2==d3):
+		return 20+(d1)*3
+	elif(d1==d2 and d2!=d3):
+		return 10+(d1)*3
+	elif(d3==d2 and d1!=d3):
+		return 10+(d2)*3
+	elif(d1==d3 and d2!=d1):
+		return 10+(d3)*3
+	elif(d1!=d2 and d2!=d3 and d3!=d1):
+		return max(d1,d2,d3)
+
 
 def bonusplaythreediceyahtzee(dice):
-	# Your code goes here
-	pass
+	dicelist=[int(i) for i in str(dice)]
+	roll_list=list(str(dice%1000))
+	# list_roll1=[int(i) for i in str(roll1)]
+	if(len(set(roll_list))==1):
+		return int("".join(roll_list)),score(roll_list)
+	elif(roll_list[0]==roll_list[1] and roll_list[1]!=roll_list[2]):
+		roll_list.remove(roll_list[2])
+		roll_list.remove(roll_list[3])
+		roll_list.pop()
+		if(roll_list[0]==roll_list[1] and roll_list[1]==roll_list[2]):
+			return dice%1000, score(dice%1000)
+		elif(roll_list[0]==roll_list[1] and roll_list[1]!=roll_list[2]):
+			roll_list.remove(roll_list[2])
+			roll_list.remove(roll_list[3])
+			roll_list.pop()
+			return
+	# if(d1==d2 and d2==d3):
+	# 	return  dice%1000, score(dice%1000)
+	# if(d1==d2 and d2!=d3):
+	# 	return  dice%1000, score(dice%1000)
