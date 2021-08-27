@@ -5,17 +5,21 @@
 # so the 0th digit is the rightmost digit. 
 
 def fun_set_kth_digit(n, k, d):
-    flag = False
-    if(n < 0):
-        n = -n
-        flag = True
-    count = 0
-    res = 0
-    while(count<=k or  n > 0):
-        r = n % 10
-        if count == k:
-            res += (d * (10 ** count))
-        else:
-            res += (r * (10 ** count))
-        count += 1
+	flag = False
+	if(n < 0):
+		n = -n
+		flag = True
+	count = 0
+	res = 0
+	while(count<=k or  n > 0):
+		r = n % 10
+		if count == k:
+			res += (d * (10 ** count))
+		else:
+			res += (r * (10 ** count))
+		count += 1
+		n = n // 10
+	if flag:
+		res = -res
+	return res
 
