@@ -8,5 +8,9 @@
 # Another hint: This can be written using just one or two lines of Python.
 
 def largestperfectsquare(n):
-	# your code goes here
-	pass
+    a=[]
+    for i in range(1,n+1):
+        if(i**(0.5) == int(i**(0.5)) and i<=n):
+            a.append(i)
+    b = a[::-1]
+    return b[0]
