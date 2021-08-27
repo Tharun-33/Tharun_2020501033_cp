@@ -7,7 +7,12 @@
 # the x-coordinate goes up while you head right, the y-coordinate goes up while you 
 # head down (so we say that "up is down")
 
+ 
 def fun_rectangle_overlap(left1, top1, width1, height1, left2, top2, width2, height2):
-    return True
+   if((left1 > height2 and height1 < left2) or (top1 < width2 and width1 > top2)  ):
+       return False
+   elif((left1 < height2 and height1 > left2) or (top1 > width2 and width1 < top2) ):
+       return True
+   return False
 
         
