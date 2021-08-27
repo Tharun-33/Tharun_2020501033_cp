@@ -3,7 +3,13 @@
 # if f is a factor of n, and False otherwise. 
 # Note that every integer is a factor of 0.
 
-
-
 def fun_isfactor(f, n):
-	return False # replace with your solution
+    if n==0:
+        return True
+    elif f==0:
+        return False
+    else:
+        if n % f == 0:
+            return True
+        else:
+            return False
