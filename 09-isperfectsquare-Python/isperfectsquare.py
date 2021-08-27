@@ -4,5 +4,13 @@
 # m**2 == n), and False otherwise. Do not crash on non-ints nor on negative ints.
 
 def isperfectsquare(n):
-	# your code goes here
-	pass
+    try:
+        n = float(n)
+        root = int(n**0.5)
+        if root**2 == n:
+            return True
+    except:
+        pass
+    if type(n) == str or n<0:
+        return False
+    return False
