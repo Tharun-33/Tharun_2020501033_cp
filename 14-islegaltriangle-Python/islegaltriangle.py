@@ -6,5 +6,7 @@
 # how can you determine the longest side, and how might that help?
 
 def islegaltriangle(s1, s2, s3):
-	# your code goes here
-	pass
+    if ((s1+s2)>s3) and ((s1+s3)>s2) and ((s2+s3)>s1):
+        return True
+    else:
+        return False
