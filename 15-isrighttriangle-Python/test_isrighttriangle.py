@@ -1,5 +1,5 @@
 import pytest
-from isrighttriangle import isrighttriangle
+from isrighttriangle import isRightTriangle
 import os
 import sys
 sys.path.append(os.getcwd())
@@ -13,4 +13,4 @@ sys.path.append(os.getcwd())
 	(5, 4, 11, 6, 15, -6, True)
 ])
 def test_isrighttriangle(x, y, z, x1, y1, z1, check):
-    assert isrighttriangle(x, y, z, x1, y1, z1) == check
+    assert isRightTriangle(x, y, z, x1, y1, z1) == check
