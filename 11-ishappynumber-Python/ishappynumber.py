@@ -16,7 +16,19 @@
 # assert(ishappynumber(98) == False)
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
-
 def ishappynumber(n):
-	# your code goes here
-	pass
+    if(n==1):
+        return True
+    while (n>=10):
+        n=squarenum(n)
+        if(n==1):
+            return True
+    return False
+ 
+def squarenum(m):
+    sum=0
+    while(m>0):
+        rem=m%10
+        sum+=(rem*rem)
+        m//=10
+    return sum
