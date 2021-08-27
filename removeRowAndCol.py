@@ -22,7 +22,13 @@
 #   [ 0, 1, 3] ]
 
 def removeRowAndCol(L, row, col):
-    # Your code goes here...
-    pass
+   a =[]
+   if(len(L) == 1 or len(L) == 0 or row == 0 or col == 0):
+       return " Cannot remove row and col "
+   else:
+       for j in L:
+           del j[col]
+       L.pop(row)
+       return L
 
 # Write your own test cases.
