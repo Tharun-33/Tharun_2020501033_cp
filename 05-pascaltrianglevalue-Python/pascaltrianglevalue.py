@@ -4,9 +4,7 @@
 # Triangle where the triangle starts at row 0, and 
 # each row starts at column 0. If either row or col 
 # are not legal values, return None, instead of crashing. 
-
-
-
-
+import math
+ 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+    return (math.factorial(row)//(math.factorial(col)*math.factorial(abs(row-col))))
