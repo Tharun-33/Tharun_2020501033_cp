@@ -2,10 +2,22 @@
 # list L and returns True  if it is rectangular, so each row has
 #  the same number of elements. Return False otherwise.
 
-
 def fun_isrectangular(l):
-	# Your code goes here...
-	return False
+    for i in l:
+        if len(i) != len(l[0]):
+            return False
+    return True
+ 
+def read2DArray():
+    a=[]
+    l=int(input())
+    for i in range(l):
+        s=input().split(" ")
+        t=[]
+        for i in range(len(s)):
+            t.append(int(s[j]))
+        a.append(t)
+    return a
 
 
 
