@@ -15,9 +15,14 @@
 # c-de
 # -fgh""")
 
-
 def fun_wordwrap(s, n):
-	return ""
+    string=''
+    s=s.strip()
+    for i in range(0,len(s),n):
+        a=s[i:n+i]
+        a=a.replace(' ','-')
+        string+=(a+'\n')
+    return string[:-1]
 
 
  
