@@ -5,6 +5,9 @@
 # learn soon, it runs in O(n) time, where n=len(a)), and so in particular you may not sort 
 # the list.
 
+ 
 def issorted(a):
-	# your code goes here
-	pass
+    if(a == sorted(a)) or (a == sorted(a,reverse=True)):
+        return True
+    else:
+        return False
