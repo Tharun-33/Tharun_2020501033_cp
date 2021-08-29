@@ -14,11 +14,20 @@
 # Once again, do not use s.replace() in your solution. 
 # You should not use a regular expression library.
 
-def cw(s):
-    # Your code goes here...
-    return ""
-
-assert(cw("a\nb") == "a b")
-assert(cw("a\n   \t    b") == "a b")
-assert(cw("a\n   \t    b  \n\n  \t\t\t c   ") == "a b c ")
+def collapseWhitespace(s):
+    flag=False
+    result=""
+    for x in s:
+        if(x.isspace()):
+            if(not flag):
+                result+=' '
+                flag=True
+        else:
+            result+=x
+            flag=False
+    return result
+ 
+assert(collapseWhitespace("a\nb") == "a b")
+assert(collapseWhitespace("a\n   \t    b") == "a b")
+assert(collapseWhitespace("a\n   \t    b  \n\n  \t\t\t c   ") == "a b c ")
 print ("All test cases passed...")
