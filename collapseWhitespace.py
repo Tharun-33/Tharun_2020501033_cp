@@ -8,12 +8,6 @@
 # space , returning "a b c ". Here are a few more test cases 
 # for you:
 
-# assert(cw("a\nb") == "a b")
-# assert(cw("a\n   \t    b") == "a b")
-# assert(cw("a\n   \t    b  \n\n  \t\t\t c   ") == "a b c ")
-# Once again, do not use s.replace() in your solution. 
-# You should not use a regular expression library.
-
 def collapseWhitespace(s):
     flag=False
     result=""
