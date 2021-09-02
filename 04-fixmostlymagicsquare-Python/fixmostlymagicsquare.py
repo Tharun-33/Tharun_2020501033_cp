@@ -8,3 +8,4 @@
 
 def fixmostlymagicsquare(L):
 	# Your code goes here
+	pass
