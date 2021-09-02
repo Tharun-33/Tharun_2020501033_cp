@@ -39,8 +39,8 @@ def reverse(number):
 	return reverse
 
 # Driver Code
-number = 295
-print(number," is lychrel? ",isLychrel(number))
+# number = 295
+# print(number," is lychrel? ",isLychrel(number))
 
 # This code is contributed by mits
 
