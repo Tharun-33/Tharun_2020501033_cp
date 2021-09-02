@@ -54,10 +54,9 @@ while i<10000 :
 	if (iskaprekar(i)) :
 		print (i," ")
 	i = i + 1
-# code contributed by Nikita Tiwari
 
-
-def fun_nth_kaprekarnumber(n):
+# nthkaprekar
+def fun_nth_kaprekarnumber(n): 
     c=0
     i=0
     while True:
